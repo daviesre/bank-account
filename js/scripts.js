@@ -10,22 +10,21 @@ BankAccount.prototype.withdraw = function(amount) {
   this.balance -= amount;
 }
 
+var bank = null;
 $(document).ready(function(){
   $("#createAccount").click(function(){
-    $("#InitialDeposit").val();
+    var initDeposit = parseInt($("#initialDeposit").val());
+    var customerName = $("#customer-name").val();
+    bank = new BankAccount (customerName, initDeposit);
+    $("#withdrawButton").click(function(){
+      bank.withdraw(parseInt($("#withdrawEntry").val()));
+      console.log(bank);
+    });
+
+    $("#depositButton").click(function(){
+      bank.deposit(parseInt($("#depositEntry").val()));
+      console.log(bank);
+    });
+    console.log(bank);
   });
-
-  $("#withdrawButton").click(function(){
-    var withdrawal = parseInt($("#withdrawEntry").val());
-    bank.withdraw(withdrawal);
-  });
-
-  $("#depositButton").click(function(){
-    $("#depositEntry").vak();
-  });
-
-  var bank = new BankAccount ("Bob", 500);
-
-  bank.withdraw(50);
-  console.log(bank);
 });
