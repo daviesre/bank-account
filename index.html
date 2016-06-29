@@ -9,28 +9,31 @@
   <body>
     <div class="container">
       <form class="form-group">
-        <div>
+        <div class="label-container">
           <label>Name:</label>
           <input type="text" class= "form-control" id="customer-name">
         </div>
 
-        <div>
-          <label>Initial Deposit</label>
+        <div class="label-container">
+          <label>Initial Deposit:</label>
           <input type="number" class = "form-control" id="initialDeposit">
         </div>
-        <button type="button" id="createAccount">Create Account</button>
+        <button type="button" id="createAccount" class="btn btn-primary">Create Account</button>
 
-        <div>
-          <label>Withdraw</label>
+        <div class="label-container">
+          <label>Withdraw:</label>
           <input type="number" class = "form-control" id="withdrawEntry">
         </div>
-        <button type="button" id="withdrawButton">Withdraw</button>
-        <div>
-          <label>Deposit</label>
+        <button type="button" id="withdrawButton" class="btn btn-danger">Withdraw</button>
+        <div class="label-container">
+          <label>Deposit:</label>
           <input type="number" class = "form-control" id="depositEntry">
         </div>
-        <button type="button" id="depositButton">Deposit</button>
+        <button type="button" id="depositButton" class= "btn btn-success">Deposit</button>
       </form>
+      <div id="output">
+
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
